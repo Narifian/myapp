@@ -1,0 +1,27 @@
+name: laporan_kerusakan_fasilitas
+description: Aplikasi untuk melaporkan kerusakan fasilitas
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.2.0+4  # SQLite database plugin
+  path: ^1.8.3       # Untuk menentukan lokasi database
+  image_picker: ^0.8.7+4  # Untuk memilih gambar dari kamera/galeri
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # Aset gambar jika Anda ingin menggunakan gambar khusus di aplikasi
+  assets:
+    - assets/images/  # Folder untuk menyimpan gambar, jika ada
