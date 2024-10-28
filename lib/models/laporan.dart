@@ -1,22 +1,16 @@
 class Laporan {
-  int? id;
-  String deskripsi;
-  String fotoPath;
-  String status;
+  final int? id;
+  final String deskripsi;
+  final String fotoPath;
+  final String status;
 
-  Laporan({this.id, required this.deskripsi, required this.fotoPath, required this.status});
+  Laporan({
+    this.id,
+    required this.deskripsi,
+    required this.fotoPath,
+    required this.status,
+  });
 
-  // Konversi dari Map (database) ke Laporan
-  factory Laporan.fromMap(Map<String, dynamic> map) {
-    return Laporan(
-      id: map['id'],
-      deskripsi: map['deskripsi'],
-      fotoPath: map['fotoPath'],
-      status: map['status'],
-    );
-  }
-
-  // Konversi dari Laporan ke Map (untuk database)
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -24,5 +18,14 @@ class Laporan {
       'fotoPath': fotoPath,
       'status': status,
     };
+  }
+
+  factory Laporan.fromMap(Map<String, dynamic> map) {
+    return Laporan(
+      id: map['id'],
+      deskripsi: map['deskripsi'],
+      fotoPath: map['fotoPath'],
+      status: map['status'],
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laporan_kerusakan_fasilitas/laporan_kerusakan.dart';
 import 'laporan_dalam_proses.dart';
 import 'edukasi.dart';
 import 'tentang_aplikasi.dart';
