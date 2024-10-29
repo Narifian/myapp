@@ -20,8 +20,4 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-  uses-material-design: true
-
-  # Aset gambar jika Anda ingin menggunakan gambar khusus di aplikasi
-  assets:
-    - assets/images/  # Folder untuk menyimpan gambar, jika ada
+  uses-material-design: true # Aset gambar jika Anda ingin menggunakan gambar khusus di aplikasi # Folder untuk menyimpan gambar, jika ada

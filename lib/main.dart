@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:laporan_kerusakan_fasilitas/laporan_kerusakan.dart';
-import 'laporan_dalam_proses.dart';
-import 'edukasi.dart';
-import 'tentang_aplikasi.dart';
+import 'package:laporan_kerusakan_fasilitas/laporan_dalam_proses.dart';
+import 'package:laporan_kerusakan_fasilitas/edukasi.dart';
+import 'package:laporan_kerusakan_fasilitas/tentang_aplikasi.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Laporan Kerusakan Fasilitas')),
+      appBar: AppBar(title: const Text('Laporan Kerusakan Fasilitas')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: GridView.count(
@@ -103,10 +103,10 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(icon, size: 48, color: Colors.blue),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               label,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ],
         ),

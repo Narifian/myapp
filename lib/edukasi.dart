@@ -4,17 +4,17 @@ class EdukasiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Edukasi')),
+      appBar: AppBar(title: const Text('Edukasi')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            Text(
+            const Text(
               'Tips Merawat Fasilitas',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               '1. Lakukan pengecekan rutin.\n'
               '2. Bersihkan fasilitas setelah digunakan.\n'
               '3. Laporkan kerusakan secepat mungkin.\n'

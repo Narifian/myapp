@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import '../models/laporan.dart';
+import 'package:laporan_kerusakan_fasilitas/models/laporan.dart';
 
 class DatabaseHelper {
   // Singleton Pattern: Membatasi agar hanya ada satu instance DatabaseHelper

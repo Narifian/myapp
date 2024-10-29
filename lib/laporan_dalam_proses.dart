@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'db/database_helper.dart';
-import 'models/laporan.dart';
+import 'package:laporan_kerusakan_fasilitas/db/database_helper.dart';
+import 'package:laporan_kerusakan_fasilitas/models/laporan.dart';
 
 class LaporanDalamProsesScreen extends StatefulWidget {
   @override
@@ -33,7 +33,7 @@ class _LaporanDalamProsesScreenState extends State<LaporanDalamProsesScreen> {
     if (konfirmasi == true) {
       await _dbHelper.updateStatusLaporan(id, 'Selesai'); // Ubah status di database
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Status berhasil diubah menjadi Selesai')),
+        const SnackBar(content: Text('Status berhasil diubah menjadi Selesai')),
       );
       _loadLaporanProses(); // Refresh data laporan
     }
@@ -44,16 +44,16 @@ class _LaporanDalamProsesScreenState extends State<LaporanDalamProsesScreen> {
     return showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Ubah Status'),
-        content: Text('Apakah Anda yakin ingin mengubah status menjadi Selesai?'),
+        title: const Text('Ubah Status'),
+        content: const Text('Apakah Anda yakin ingin mengubah status menjadi Selesai?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text('Batal'),
+            child: const Text('Batal'),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
-            child: Text('Ya'),
+            child: const Text('Ya'),
           ),
         ],
       ),
@@ -63,19 +63,19 @@ class _LaporanDalamProsesScreenState extends State<LaporanDalamProsesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Laporan dalam Proses')),
+      appBar: AppBar(title: const Text('Laporan dalam Proses')),
       body: _laporanList.isEmpty
-          ? Center(child: Text('Tidak ada laporan dalam proses'))
+          ? const Center(child: Text('Tidak ada laporan dalam proses'))
           : ListView.builder(
               itemCount: _laporanList.length,
               itemBuilder: (context, index) {
                 final laporan = _laporanList[index];
                 return ListTile(
-                  leading: Icon(Icons.build, color: Colors.orange),
+                  leading: const Icon(Icons.build, color: Colors.orange),
                   title: Text(laporan.deskripsi),
                   subtitle: Text('Status: ${laporan.status}'),
                   trailing: IconButton(
-                    icon: Icon(Icons.check_circle, color: Colors.green),
+                    icon: const Icon(Icons.check_circle, color: Colors.green),
                     onPressed: () => _ubahStatusLaporan(laporan.id!), // Panggil fungsi ubah status
                   ),
                   onTap: () {
